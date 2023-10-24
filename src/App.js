@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './components/button';
 import axios from 'axios';
 import Navbar from './components/navbar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home.js';
 import Hero from './components/hero';
 import CardHolder from './components/card/CardHolder';
@@ -21,38 +21,28 @@ const getStuff = async()=>{const results = await axios.get('exampleurl')
   return results.data;
 };
 
-
-
 //the main app site
 // export this to get the site to run
-// why do i have to import it here to get it to show for hero, but not for navbar
+
+// in actual site: go to webpage Home, Loading, and Playlist
+// is loading a site? how can i get it to do a little loading animation, then jump to the playlist
+// export can also be an option, but should only do this if i have time at the end of the project
 function App() {
   return (
     <>
       <Router>
-        <Navbar>
+        {/* <Navbar> */}
+        <Navbar />
           <Routes>
-            <Route path='/' exact component={Home}/>
-            <Route path='/service' component={Services} />
-            <Route path='/product' component={Product} />
-            <Route path='sign-up'component={Signup} />
+            <Route path='/' key='/' exact element={<Home />}/>
+            <Route path='/service' key='/service' element={<Services />} />
+            <Route path='/product' key='/product' element={<Product />} />
+            <Route path='sign-up' key='/sign-up' element={<Signup />} />
           </Routes> 
-        </Navbar>
-        <Dropdown>
-          Dropdown here test 
-        </Dropdown>
-        {/* <Button
-          onClick={getStuff}
-          type="button"
-        >
-          click here test!
-        </Button> */}
-        <Hero>
-
-        </Hero>
-        <CardHolder>
-
-        </CardHolder>
+        {/* </Navbar> */}
+        
+  
+        {/* <CardHolder /> */}
       </Router>
     </>
   );

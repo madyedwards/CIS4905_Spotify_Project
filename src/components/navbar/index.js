@@ -34,7 +34,6 @@ function Navbar() {
   
   // link to get to other sites seems to not be working
   return (
-    <>
     <nav className='navbar'>
         <div className='navbar-container'>
            <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
@@ -49,7 +48,7 @@ function Navbar() {
               className='nav-links' 
               onClick={closeMobileMenu}
               >
-                Services
+                About
               </Link>
             </li>
             <li className='nav-item'>
@@ -58,7 +57,7 @@ function Navbar() {
               className='nav-links' 
               onClick={closeMobileMenu}
               >
-                Products
+                Playlists
               </Link>
             </li>
             <li className='nav-item'>
@@ -74,7 +73,7 @@ function Navbar() {
            {Button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
         </div>
     </nav>
-    </>
+
   );
 }
 
