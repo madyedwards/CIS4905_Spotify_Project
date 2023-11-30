@@ -19,7 +19,14 @@
   .hero-container > p {
     background-color: aliceblue;
     margin-top: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
     color: #000000;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 20px;
     font-size: 32px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
       'Lucida Sans', Arial, sans-serif;

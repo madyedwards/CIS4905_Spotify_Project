@@ -3,10 +3,18 @@ import Button from '../button';
 import './Hero.css';
 import '../../App.css';
 import CardHolder from '../card/CardHolder';
+import { useState } from 'react';
+import ControlledComponent from '../form';
+import { Link } from 'react-router-dom';
+
 
 // for some reason this info isnt showing in the website?
 // prob an error with the imports
 function Hero() {
+
+  // const [click, setClick] = useState(true);
+  // const handleClick = () => setClick(!click);
+
   return (
     <div className='hero-container'>
         <video src='../../../public/videos/background.mp4' autoPlay loop muted/>
@@ -14,29 +22,26 @@ function Hero() {
             Generate a Playlist!
         </h1>
         <p>
-            I want to create a playlist based on [dropdown of options].
-            I want to include [number of songs].
-            
+            I want to create a playlist based on 
+            <select>
+                <option value=""> </option>
+                <option value=""> artists </option>
+                <option value=""> genres </option>
+                <option value=""> songs </option>
+            </select>
+            . I want to include <ControlledComponent/> songs in my playlist.
         </p>
         <div className='hero-btns'>
-            <Button 
-            className='btns' 
-            buttonStyle='btn--outline'
-            buttonSize='btn--large'
-        > 
-            GENERATE
-            </Button>
+            <Link to='/playlist'>
+              <Button 
+              className='btns' 
+              buttonStyle='btn--outline'
+              buttonSize='btn--large'
+              > 
+              GENERATE
+             </Button>   
+            </Link>
         </div>
-        {/* <div className='hero-btns'>
-            <Button 
-            className='btns' 
-            buttonStyle='btn--primary'
-            buttonSize='btn--large'
-        > 
-            Watch Trailer <i classname='far fa-play-circle'></i>
-            </Button>
-        </div> */}
-
     </div>
   )
 }

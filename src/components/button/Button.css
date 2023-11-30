@@ -18,7 +18,7 @@
 }
 
 .btn--outline {
-    background-color: transparent;
+    background-color: black;
     color: white;
     padding: 8px 20px;
     border: 1px solid var(--primary);

@@ -39,10 +39,7 @@ function App() {
             <Route path='/product' key='/product' element={<Product />} />
             <Route path='sign-up' key='/sign-up' element={<Signup />} />
           </Routes> 
-        {/* </Navbar> */}
         
-  
-        {/* <CardHolder /> */}
       </Router>
     </>
   );
